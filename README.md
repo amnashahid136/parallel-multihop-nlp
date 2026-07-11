@@ -33,14 +33,11 @@ Evaluated on **NaturalQuestions, TriviaQA, WebQuestions, and FEVER** over a 50,0
 Ablation confirms the gains come from two compounding factors: migrating to Ray eliminates GIL-bound preprocessing overhead, while replacing TF-IDF with FAISS + MiniLM delivers both the dominant 45.4× retrieval speedup *and* a 2.7-point accuracy improvement over the sparse-representation baseline — i.e., no speed/accuracy trade-off.
 
 ## Repository Contents
-
-```
 .
 ├── paper.pdf          # Full write-up: motivation, related work, methodology, results
 ├── pipeline.ipynb      # End-to-end implementation (preprocessing, embedding, retrieval, classification)
 ├── requirements.txt    # Pinned dependencies
 └── README.md
-```
 
 ## Pipeline Architecture
 
@@ -53,8 +50,8 @@ Ablation confirms the gains come from two compounding factors: migrating to Ray 
 ## Setup & Usage
 
 ```bash
-git clone <this-repo-url>
-cd <repo-folder>
+git clone https://github.com/amnashahid136/parallel-multihop-nlp.git
+cd parallel-multihop-nlp
 pip install -r requirements.txt
 jupyter notebook pipeline.ipynb
 ```
@@ -68,12 +65,9 @@ Loaded via Hugging Face `datasets`: NaturalQuestions, TriviaQA, WebQuestions, FE
 ## Citation
 
 If you reference this work, please cite the accompanying paper (`paper.pdf`):
-
-```
 Shahid, A., Kamal, M. (2025). Parallelized NLP Pipeline for Multi-Hop Reasoning
 and Topic Classification: Scaling Beyond the GIL with Ray, FAISS, and Dense
 Tensor Embeddings. FAST-NUCES Islamabad.
-```
 
 ## License
 
